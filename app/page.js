@@ -1,19 +1,32 @@
 'use client'
 import Foliocard from '@/components/foliocard'
-import NewFolioEntry from '@/components/newfolioentry'
+import { Button } from "@/components/ui/button"
+
 
 export default function Home() {
     return (
-        <main>
-            <section className="h-full px-8 py-24 text-white ">
-                <h1 className="mb-8 text-3xl font-semibold tracking-tight text-black">
+        <main className="w-full p-12 ">
+            <div className='flex gap-4 mb-8 '>
+                <h1 className="text-4xl font-semibold tracking-tight text-black">
                     Current Investments
                 </h1>
+                <Button className='bg-red-400'>Add</Button>
+            </div>
                 <div className="grid grid-cols-5 gap-4">
-                    <NewFolioEntry />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
+                    <Foliocard />
                     <Foliocard />
                 </div>
-            </section>
         </main>
     )
 }
