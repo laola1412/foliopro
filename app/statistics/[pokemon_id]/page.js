@@ -11,6 +11,9 @@ export default async function PokemonDetails({ params }) {
             <Suspense fallback={<Loading />}>
                 {data && (
                     <div>
+                        <h1 className="mb-8 text-4xl font-semibold tracking-tight">
+                            {params.pokemon_id}
+                        </h1>
                         <h1>{data.name}</h1>
                         <p>{data.types[0].type.name}</p>
                         <p>{data.weight}</p>

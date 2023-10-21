@@ -1,17 +1,20 @@
 import { CalendarDays } from 'lucide-react'
-
+import Link from 'next/link'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 
-export default function Foliocard() {
+export default function Foliocard(props) {
     return (
         <>
-            <div className="px-4 py-6 bg-white border rounded-md">
+            <Link
+                href={`/${props.id}`}
+                className="px-4 py-6 bg-white border rounded-md hover:bg-neutral-200 hover:cursor-pointer"
+            >
                 <HoverCard>
                     <HoverCardTrigger asChild>
                         <Button className="text-lg font-bold " size="simple" variant="link">
-                            QRTEA
+                            {props.title.toUpperCase()}
                         </Button>
                     </HoverCardTrigger>
                     <HoverCardContent className="w-80">
@@ -35,8 +38,8 @@ export default function Foliocard() {
                         </div>
                     </HoverCardContent>
                 </HoverCard>
-                <p className="text-sm tracking-tight text-neutral-500">Qurate Retail Inc.</p>
-            </div>
+                <p className="text-sm tracking-tight text-neutral-500">Hello 123</p>
+            </Link>
         </>
     )
 }
